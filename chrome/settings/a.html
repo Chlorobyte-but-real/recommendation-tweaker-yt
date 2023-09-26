@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="a.css">
+</head>
+<body>
+  <!-- Access to LoadSettings(), scattered but not duplicated -->
+  <script src="../runtweak.js"></script>
+  <!-- Dropdown system -->
+  <script src="dropdowns.js"></script>
+
+  <p id="vernumber" style="position: absolute; left: 1pt; top: 1pt; margin: 0; padding: 0; color: RGBA(255, 255, 255, 0.5); font-size: 8pt"></p>
+  <script src="readmanifest.js"></script>
+  <h1>Settings</h1>
+
+  <h1 id="loading" class="separator">Loading...</h1>
+  <span id="loadinghide" style="display: none;">
+    <p style="width: 100%; flex: auto">
+      <span style="display: inline-block; min-width: 50%;">
+        Enabled?
+        <label class="switch">
+          <input type="checkbox" id="cb_enabled" checked="true">
+          <span class="slider"></span>
+        </label>
+      </span>
+      <span>
+        Quick delete
+        <label class="switch">
+          <input type="checkbox" id="cb_quickdel">
+          <span class="slider"></span>
+        </label>
+      </span>
+      <script src="sliders.js"></script>
+    </p>
+
+    <p style="text-align: center;"><b>Presets</b>
+      <table class="separator" style="width: 100%;"><tr>
+        <td style="width: 40%;">
+          <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div id="presetsDropdown" class="dropdown-content"></div>
+          </div>
+        </td>
+        <td style="width: 20%;"><button id="presetSave">Save as</button></td>
+        <td style="width: 20%;"><button id="presetExport">Export</button></td>
+        <td style="width: 20%;"><button id="presetImport">Import</button></td>
+      </tr></table>
+      <script src="presets.js"></script>
+    </p>
+
+    <p id="rules" style="text-align: center;"><b>Rules</b>
+      <button class="addRule"></button>
+      <script src="rules.js"></script>
+    </p>
+  </span>
+</body>
+</html>

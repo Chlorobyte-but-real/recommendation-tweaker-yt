@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Recommendation Tweaker for YouTube",
+  "version": "2.2",
+
+  "description": "Take the trash out! Get rid of the garbage recommendations with this highly customizable extension!",
+
+  "author": "Benedani - https://benedani.xyz/",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": {
+    "32": "icons/32.png",
+    "64": "icons/64.png",
+    "96": "icons/96.png",
+    "192": "icons/192.png",
+    "384": "icons/384.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/32.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png",
+      "192": "icons/192.png",
+      "384": "icons/384.png"
+    },
+    "default_title": "Recommendation Tweaker for YouTube",
+    "default_popup": "settings/a.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["runtweak.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["storage.js"]
+  }
+}
